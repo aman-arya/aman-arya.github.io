@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Publications & Research Projects - Aman Kumar, Visual Analytics Researcher">
+    <meta name="keywords" content="Visual Analytics Publications, Research Projects, SHAP, Multi-Criteria Decision Making, EuroVA">
+    <meta name="author" content="Aman Kumar">
+    <title>Publications | Aman Kumar</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;600;700&family=Bree+Serif&family=Inconsolata:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">Aman Kumar</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#education" class="nav-link">Education</a></li>
+                <li><a href="index.html#research" class="nav-link">Research</a></li>
+                <li><a href="publications.html" class="nav-link active">Publications</a></li>
+                <li><a href="teaching.html" class="nav-link">Teaching</a></li>
+                <li><a href="awards.html" class="nav-link">Awards</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title fade-in">Publications & Research Projects</h1>
+            <p class="page-subtitle slide-up">Conference papers and ongoing research in Visual Analytics and Interactive ML</p>
+        </div>
+    </section>
+
+    <!-- PUBLICATIONS Section (Papers & Projects) -->
+    <section id="publications" class="section bg-light">
+        <div class="container">
+            <!-- Conference Papers -->
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-file-alt"></i> Conference Proceedings
+                </h3>
+                <div class="publication-list">
+                    <div class="publication-item">
+                        <div class="pub-year">2025</div>
+                        <div class="pub-content">
+                            <h4 class="pub-title">Personalized Visual Analytics Framework</h4>
+                            <p class="pub-authors"><strong>Aman Kumar</strong></p>
+                            <p class="pub-venue"><em>EuroVA 2025 - 16th International EuroVis Workshop on Visual Analytics</em>, June 2025 (To be presented)</p>
+                            <div class="pub-tags">
+                                <span class="tag">Visual Analytics</span>
+                                <span class="tag">Multi-Criteria Decision Making</span>
+                                <span class="tag">LLMs</span>
+                                <span class="tag">HCI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Projects -->
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-flask"></i> Research Projects
+                </h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Personalized Visual Analytics for Multi-Criteria Decision Making</h4>
+                            <span class="project-period">March 2025 – Present</span>
+                        </div>
+                        <p class="project-institution"><i class="fas fa-university"></i> University of Zürich</p>
+                        <div class="project-description">
+                            <ul>
+                                <li>Identified shortcomings in current multi-criteria decision systems that lead to suboptimal, non-transparent rankings</li>
+                                <li>Developed an interactive VA framework to capture complex user preferences via explicit inputs and implicit feedback</li>
+                                <li>Engineered a prototype with advanced attribute scoring, uncertainty visualization, and LLM-powered natural-language explanations in a human-in-the-loop system</li>
+                                <li>Established a scalable, transparent prototype improving decision accuracy and user trust for real-world applications</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <i class="fas fa-code"></i>
+                            <span class="tech-tag">Visual Analytics</span>
+                            <span class="tech-tag">LLMs</span>
+                            <span class="tech-tag">Human-in-the-Loop</span>
+                            <span class="tech-tag">Uncertainty Visualization</span>
+                            <span class="tech-tag">MCDA</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Evaluating the Stability of SHAP Under Class Imbalance</h4>
+                            <span class="project-period">January 2024 – October 2024</span>
+                        </div>
+                        <p class="project-institution"><i class="fas fa-university"></i> University of Leeds</p>
+                        <div class="project-description">
+                            <ul>
+                                <li>Developed and executed an experimental framework to assess the stability of SHAP values across machine learning models (SVM, KNN, Decision Trees, XGBoost) using imbalanced datasets</li>
+                                <li>Developed SMOTE-Tomek hybrid sampling to create datasets with varying class imbalance ratios (1%, 5%, 10%, till 50%)</li>
+                                <li>Introduced a novel metric, Coefficient of Variation (CV), for quantifying SHAP value stability</li>
+                                <li>Generated visual insights using SHAP plots and box plots to communicate findings on feature importance stability</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <i class="fas fa-code"></i>
+                            <span class="tech-tag">SHAP</span>
+                            <span class="tech-tag">XAI</span>
+                            <span class="tech-tag">SMOTE-Tomek</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Machine Learning</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Fourier Analysis and Roth's Theorem</h4>
+                            <span class="project-period">July 2021 – July 2022</span>
+                        </div>
+                        <p class="project-institution"><i class="fas fa-university"></i> IISER Bhopal</p>
+                        <div class="project-description">
+                            <ul>
+                                <li>Studied Fourier analytic techniques and applications to Roth's Theorem in additive combinatorics</li>
+                                <li>Explored recent advancements in the finite field setting and breakthroughs in upper bounds for the Cap-set problem using the polynomial method</li>
+                                <li>Developed understanding of mathematical proofs in additive combinatorics and the elegance of solving problems</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <i class="fas fa-code"></i>
+                            <span class="tech-tag">Fourier Analysis</span>
+                            <span class="tech-tag">Combinatorics</span>
+                            <span class="tech-tag">Pure Mathematics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Aman Kumar. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/arya-aman" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/aman-arya" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:amank.xai@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
