@@ -141,16 +141,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                // Apple-style staggered reveal: siblings cascade in sequence
+                const siblings = entry.target.parentElement.children;
+                const index = Array.from(siblings).indexOf(entry.target);
+                entry.target.style.transitionDelay = `${Math.min(index, 6) * 0.08}s`;
                 entry.target.classList.add('animate-in');
-
-                // Add stagger delay for cards
-                if (entry.target.classList.contains('interest-card') ||
-                    entry.target.classList.contains('project-card') ||
-                    entry.target.classList.contains('fact-card')) {
-                    const cards = entry.target.parentElement.children;
-                    const index = Array.from(cards).indexOf(entry.target);
-                    entry.target.style.animationDelay = `${index * 0.1}s`;
-                }
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -166,13 +162,16 @@ document.addEventListener('DOMContentLoaded', function() {
         .supervision-item,
         .award-item,
         .conference-item,
-        .contact-item
+        .contact-item,
+        .education-item,
+        .news-item
     `);
 
     animatableElements.forEach(el => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.style.transform = 'translateY(34px)';
+        el.style.transition = 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+        el.style.willChange = 'opacity, transform';
         observer.observe(el);
     });
 
@@ -183,52 +182,11 @@ document.addEventListener('DOMContentLoaded', function() {
             opacity: 1 !important;
             transform: translateY(0) !important;
         }
-    `;
-    document.head.appendChild(style);
-
-    // ============================================
-    // 7. SKILL TAGS HOVER EFFECT
-    // ============================================
-    const skillTags = document.querySelectorAll('.skill-tag');
-
-    skillTags.forEach(tag => {
-        tag.addEventListener('mouseenter', function() {
-            // Add ripple effect
-            const ripple = document.createElement('span');
-            ripple.style.cssText = `
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, transparent 70%);
-                border-radius: 20px;
-                animation: ripple 0.6s ease-out;
-                pointer-events: none;
-            `;
-
-            this.style.position = 'relative';
-            this.appendChild(ripple);
-
-            setTimeout(() => ripple.remove(), 600);
-        });
-    });
-
-    // Add ripple animation
-    const rippleStyle = document.createElement('style');
-    rippleStyle.textContent = `
-        @keyframes ripple {
-            from {
-                transform: scale(0);
-                opacity: 1;
-            }
-            to {
-                transform: scale(1.5);
-                opacity: 0;
-            }
+        @media (prefers-reduced-motion: reduce) {
+            .animate-in { transition: none !important; }
         }
     `;
-    document.head.appendChild(rippleStyle);
+    document.head.appendChild(style);
 
     // ============================================
     // 8. DROPDOWN MENU FOR MOBILE
