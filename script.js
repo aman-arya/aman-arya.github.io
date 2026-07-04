@@ -467,39 +467,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     // 18. CONSOLE EASTER EGG
     // ============================================
-    console.log('%c👋 Hello, curious developer!', 'color: #527bbd; font-size: 20px; font-weight: bold;');
-    console.log('%cThis website was built for Aman Kumar', 'color: #6c757d; font-size: 14px;');
-    console.log('%cResearcher in Visual Analytics & Interactive Machine Learning', 'color: #6c757d; font-size: 14px;');
-    console.log('%cUniversity of Zürich, Switzerland', 'color: #6c757d; font-size: 14px;');
-    console.log('%c\nInterested in collaboration? Contact: amank.xai@gmail.com', 'color: #e67e22; font-size: 14px; font-weight: bold;');
-
-    // ============================================
-    // 19. TYPING EFFECT FOR HERO NAME
-    // ============================================
-    const heroTitle = document.querySelector('.hero-title');
-
-    if (heroTitle) {
-        const text = heroTitle.textContent;
-        heroTitle.textContent = '';
-        heroTitle.style.opacity = '1';
-
-        let index = 0;
-        function typeWriter() {
-            if (index < text.length) {
-                heroTitle.textContent += text.charAt(index);
-                index++;
-                setTimeout(typeWriter, 100); // Adjust speed here (100ms per character)
-            }
-        }
-
-        // Start typing after a short delay
-        setTimeout(typeWriter, 500);
-    }
-
-    // ============================================
-    // 20. INITIALIZE ALL FEATURES
-    // ============================================
-    console.log('✅ All interactive features initialized successfully!');
+    console.log('%c👋 Hello, curious developer!', 'color: #b8502e; font-size: 20px; font-weight: bold;');
+    console.log('%cThis website was built for Aman Kumar', 'color: #736c62; font-size: 14px;');
+    console.log('%cResearcher in Visual Analytics & Interactive Machine Learning', 'color: #736c62; font-size: 14px;');
+    console.log('%cUniversity of Zürich, Switzerland', 'color: #736c62; font-size: 14px;');
+    console.log('%c\nInterested in collaboration? Contact: amank.xai@gmail.com', 'color: #c99a3d; font-size: 14px; font-weight: bold;');
 });
 
 // ============================================
